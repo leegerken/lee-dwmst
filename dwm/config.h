@@ -3,14 +3,14 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
-
+#define FONT "More Perfect DOS VGA"
 /* appearance */
 static const unsigned int borderpx  = 10;	/* border pixel of windows */
 static const unsigned int snap      = 10;	/* snap pixel */
 static const int showbar            = 1;	/* 0 means no bar */
 static const int topbar             = 1;  /* 0 means bottom bar */
-static const char *fonts[]          = {"More Perfect DOS VGA:pixelsize=24:antialias=false"};
-static const char dmenufont[]       = "More Perfect DOS VGA:pixelsize=24:antialias=false";
+static const char *fonts[]          = {FONT":pixelsize=24:antialias=false"};
+static const char dmenufont[]       = FONT":pixelsize=24:antialias=false";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
