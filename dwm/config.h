@@ -67,6 +67,7 @@ static Key keys[] = {
 	/* modifier        key        function			 argument */
 	{MODKEY,           XK_q,      killclient,    {0} },
 	{MODKEY|ShiftMask, XK_q,      quit,          {0} },
+	{MODKEY,					 XK_w,			spawn,				 SHCMD("$BROWSER")},
 	{MODKEY,					 XK_r,			spawn,				 SHCMD(TERMINAL "  -e $FILE")},
 	{MODKEY,           XK_d,      spawn,         {.v = dmenucmd }},
 	{MODKEY,           XK_Return, spawn,         {.v = termcmd }},
