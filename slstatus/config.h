@@ -10,13 +10,13 @@ static const char unknown_str[] = "n/a";
 #define MAXLEN 2048
 
 /*
- * function            description                     argument (example)
+ *function					 description					  argument (example)
  *
- * battery_perc        battery percentage              battery name (BAT0)
+ *battery_perc       battery percentage	    battery name (BAT0)
+ *                                          NULL on OpenBSD/FreeBSD
+ *battery_state      battery charging state          battery name (BAT0)
  *                                                     NULL on OpenBSD/FreeBSD
- * battery_state       battery charging state          battery name (BAT0)
- *                                                     NULL on OpenBSD/FreeBSD
- * battery_remaining   battery remaining HH:MM         battery name (BAT0)
+ *battery_remaining  battery remaining HH:MM     battery name (BAT0)
  *                                                     NULL on OpenBSD/FreeBSD
  * cpu_perc            cpu usage in percent            NULL
  * cpu_freq            cpu frequency in MHz            NULL
@@ -65,7 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function			format          argument */
-	{ datetime,			"%s ",          "%a %b %d, %I:%M %p" },
+	{ datetime,			" %s ",          "%a %b %d, %I:%M %p" },
   { battery_perc, "[%s%%] ",				NULL },
 	{ wifi_essid,		"[%s]",					"ath0" },
 };
